@@ -68,5 +68,5 @@ ignore
 /usr/sbin/lpq
 /usr/sbin/lprm
 
-df lemezkimenet
+df -> lemezkimenet
 
