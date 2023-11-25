@@ -44,6 +44,9 @@ Ha van írási jogunk passwd/shadowra
 openssl passwd parancs
 openssl passwd -6 (sha-512) alma
 
+useradd <user>
+passwd <user>
+
 python3 -m http.server
 wget
 
